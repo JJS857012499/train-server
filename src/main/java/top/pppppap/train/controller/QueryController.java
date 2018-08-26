@@ -1,4 +1,4 @@
-package top.pppppap.train.Controller;
+package top.pppppap.train.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;

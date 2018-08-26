@@ -1,4 +1,4 @@
-package top.pppppap.train.Controller;
+package top.pppppap.train.controller;
 
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import top.pppppap.train.client.Login;
 import top.pppppap.train.client.Query;
 import top.pppppap.train.dto.JsonData;
-import top.pppppap.train.service.QueryService;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;

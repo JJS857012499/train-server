@@ -1,5 +1,6 @@
 package top.pppppap.train.client;
 
+import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -9,6 +10,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.message.BasicNameValuePair;
+import top.pppppap.train.dto.JsonData;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -115,6 +117,12 @@ public class BaseClient {
      * @return
      **/
     public static JSONObject getResponseJson(HttpEntity entity) throws IOException {
-        return JSONObject.parseObject(getResponseString(entity));
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject = JSONObject.parseObject(getResponseString(entity));
+        } catch (JSONException e) {
+            return new JSONObject();
+        }
+        return jsonObject;
     }
 }
