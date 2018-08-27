@@ -6,6 +6,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.pppppap.train.client.Login;
 import top.pppppap.train.client.Query;
@@ -61,7 +62,7 @@ public class LoginController {
 
     @ResponseBody
     @CrossOrigin
-    @RequestMapping("/trainlogin")
+    @RequestMapping(value = "/trainlogin",method = RequestMethod.POST)
     public JsonData Login(HttpServletRequest request) {
         HttpSession session = request.getSession();
         CloseableHttpClient connection = (CloseableHttpClient) session.getAttribute("connection");
