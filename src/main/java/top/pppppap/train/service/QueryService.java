@@ -54,21 +54,25 @@ public class QueryService {
 //            station[8]=stations[31];
 //            station[9]=stations[32];
             JSONObject object = new JSONObject();
-            object.put("no", stations[3]);//车次
-            object.put("startStation", stations[6]);//起点站
-            object.put("endStation", stations[7]);//到达站
-            object.put("seat1", stations[23]);//软卧
-            object.put("seat2", stations[26]);//无座
-            object.put("seat3", stations[28]);//硬卧
-            object.put("seat4", stations[29]);//硬座
-            object.put("seat5", stations[30]);//二等座
-            object.put("seat6", stations[31]);//一等座
-            object.put("seat7", stations[32]);//商务座特等座
-            object.put("secret", stations[0]);//密码串
-            object.put("startTime",stations[8]);
-            object.put("endTime",stations[9]);
-            object.put("durationTime",stations[10]);
-            jsonObjectList.add(object);
+            try {
+                object.put("no", stations[3]);//车次
+                object.put("startStation", stations[6]);//起点站
+                object.put("endStation", stations[7]);//到达站
+                object.put("seat1", stations[23]);//软卧
+                object.put("seat2", stations[26]);//无座
+                object.put("seat3", stations[28]);//硬卧
+                object.put("seat4", stations[29]);//硬座
+                object.put("seat5", stations[30]);//二等座
+                object.put("seat6", stations[31]);//一等座
+                object.put("seat7", stations[32]);//商务座特等座
+                object.put("secret", stations[0]);//密码串
+                object.put("startTime", stations[8]);
+                object.put("endTime", stations[9]);
+                object.put("durationTime", stations[10]);
+                jsonObjectList.add(object);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 //        for (JSONObject object : jsonObjectList) {
 //            System.out.println(object);

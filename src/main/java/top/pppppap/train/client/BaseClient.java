@@ -34,7 +34,7 @@ public class BaseClient {
     }
 
     //车票查询地址
-    public static final String QUERY_STATION = "https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=#&leftTicketDTO.from_station=#&leftTicketDTO.to_station=#&purpose_codes=ADULT";
+    public static final String QUERY_STATION = "https://kyfw.12306.cn/otn/leftTicket/queryA?leftTicketDTO.train_date=#&leftTicketDTO.from_station=#&leftTicketDTO.to_station=#&purpose_codes=ADULT";
     //登录地址
     public static final String LOGIN_URL = "https://kyfw.12306.cn/passport/web/login";
     //验证码图片地址
